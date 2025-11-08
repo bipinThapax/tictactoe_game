@@ -13,31 +13,42 @@ nav {
   padding: 1rem;
   font-size: 2rem;
   font-weight: bold;
+  color: white;
   background-color: black;
 }
 
 section {
   height: calc(100vh - 50px);
+  padding: 5rem 0;
   background-color: rgb(5 92 106);
 }
 
+.winMsg {
+  color: wheat;
+  font-size: 3.8rem;
+  text-align: center;
+}
+
 .boxCont {
-  padding: 2.5rem 0;
   display: grid;
   gap: 1rem;
-  grid-template-columns: 120px 120px 120px;
-  grid-template-rows: 120px 120px 120px;
-  justify-content: center;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  width: min(90vw, 360px);
+  margin: 2rem auto;
+  aspect-ratio: 1 / 1;
+  padding: 1rem;
 }
 
 .box {
-  height: 120px;
-  width: 120px;
-  padding: 2.8rem 2.5rem;
-  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 5rem;
-  text-align: center;
+  border-radius: 1rem;
+  color: #540863;
   background-color: rgb(255 254 83);
+  aspect-ratio: 1 / 1;
   cursor: pointer;
 }
 
@@ -58,4 +69,15 @@ section {
 
 .btn button:hover {
   background-color: rgb(15, 14, 14);
+}
+
+/* responsiveness */
+@media (max-width: 400px) {
+  .boxCont {
+    width: 90vw;
+    gap: 0.5rem;
+  }
+  .box {
+    font-size: 3rem;
+  }
 }
